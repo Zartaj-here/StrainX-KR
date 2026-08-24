@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Senior-first (§7): >=20pt body text, >=44pt tap targets, high contrast,
+   tap only. The .senior scope wraps every participant-facing page. */
+.senior {
+  font-size: 27px; /* ~20pt */
+  line-height: 1.55;
+  color: #111;
+  -webkit-tap-highlight-color: transparent;
+}
+.senior button {
+  min-height: 59px; /* ~44pt */
+  min-width: 59px;
+}
+
+html, body {
+  height: 100%;
+  background: #fffdf8;
+}

@@ -1,0 +1,18 @@
+{
+  "name": "strainx",
+  "private": true,
+  "version": "0.1.0",
+  "description": "StrainX Phase 0 — a care tool for a senior day-care center. Phase 1 (research) is schema-gated behind an ethics approval reference.",
+  "scripts": {
+    "lint:copy": "node scripts/copy-lint.mjs apps/web/src apps/kiosk/src apps/kiosk/App.tsx",
+    "web:dev": "npm --prefix apps/web run dev",
+    "web:build": "npm --prefix apps/web run build",
+    "provision": "node scripts/provision.mjs",
+    "study:enable": "node scripts/set-study-mode.mjs",
+    "export:fantasia": "node scripts/export-fantasia.mjs",
+    "test:ppg": "npx --yes esbuild apps/kiosk/src/lib/ppg.ts --format=esm --outfile=apps/kiosk/src/lib/ppg.compiled.mjs && node apps/kiosk/src/lib/ppg.test.mjs"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.4"
+  }
+}

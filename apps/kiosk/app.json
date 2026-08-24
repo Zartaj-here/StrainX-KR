@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "오늘의 기록 키오스크",
+    "slug": "strainx-kiosk",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "platforms": ["ios", "android"],
+    "ios": {
+      "bundleIdentifier": "com.strainx.kiosk",
+      "infoPlist": {
+        "NSCameraUsageDescription": "심장 박동 확인을 위해 카메라를 사용합니다."
+      }
+    },
+    "android": {
+      "package": "com.strainx.kiosk",
+      "permissions": [
+        "CAMERA",
+        "android.permission.BLUETOOTH_SCAN",
+        "android.permission.BLUETOOTH_CONNECT"
+      ]
+    },
+    "plugins": [
+      [
+        "react-native-vision-camera",
+        {
+          "cameraPermissionText": "심장 박동 확인을 위해 카메라를 사용합니다.",
+          "enableCodeScanner": true
+        }
+      ],
+      [
+        "react-native-ble-plx",
+        {
+          "isBackgroundEnabled": false,
+          "modes": ["central"],
+          "bluetoothAlwaysPermission": "가슴 벨트(심박 기기)를 함께 확인하기 위해 블루투스를 사용합니다."
+        }
+      ]
+    ]
+  }
+}

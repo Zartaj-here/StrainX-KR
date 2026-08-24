@@ -1,0 +1,15 @@
+node_modules/
+.next/
+.expo/
+dist/
+build/
+.env
+.env.local
+.env*.local
+*.log
+.DS_Store
+supabase/.temp/
+*.compiled.mjs
+
+# Local AI-tooling pointer to CONTRIBUTING.md; never part of the developer handoff.
+CLAUDE.md
